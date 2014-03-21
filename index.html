@@ -60,12 +60,20 @@
             width: 120px;
             height: 100px;
             -webkit-animation: flap .4s steps(4) infinite alternate, bob .8s linear infinite;
+            -moz-animation: flap .4s steps(4) infinite alternate, bob .8s linear infinite;
+            -ms-animation: flap .4s steps(4) infinite alternate, bob .8s linear infinite;
+            -o-animation: flap .4s steps(4) infinite alternate, bob .8s linear infinite;
+            animation: flap .4s steps(4) infinite alternate, bob .8s linear infinite;
         }
 
         #help {
             position: absolute;
             font-size: 14px;
             -webkit-animation: fadein 10s linear .1s infinite;
+            -moz-animation: fadein 10s linear .1s infinite;
+            -ms-animation: fadein 10s linear .1s infinite;
+            -o-animation: fadein 10s linear .1s infinite;
+            animation: fadein 10s linear .1s infinite;
             margin-top: 10px;
             opacity: 0;
         }
@@ -76,11 +84,35 @@
             color: #222;
             font-weight: bold;
             -webkit-animation: fadein 10s linear 4s infinite;
+            -moz-animation: fadein 10s linear 4s infinite;
+            -ms-animation: fadein 10s linear 4s infinite;
+            -o-animation: fadein 10s linear 4s infinite;
+            animation: fadein 10s linear 4s infinite;
             opacity: 0;
         }
 
         /* Flapping animation */
         @-webkit-keyframes flap {
+         from { background-position:    0px; }
+           to { background-position: -480px; }
+        }
+
+        @-moz-keyframes flap {
+         from { background-position:    0px; }
+           to { background-position: -480px; }
+        }
+
+        @-ms-keyframes flap {
+         from { background-position:    0px; }
+           to { background-position: -480px; }
+        }
+
+        @-o-keyframes flap {
+         from { background-position:    0px; }
+           to { background-position: -480px; }
+        }
+
+        @keyframes flap {
          from { background-position:    0px; }
            to { background-position: -480px; }
         }
@@ -92,7 +124,63 @@
           to { margin-top: -57px; }
         }
 
+        @-moz-keyframes bob {
+          from { margin-top: -57px; }
+          50% { margin-top: -63px; }
+          to { margin-top: -57px; }
+        }
+
+        @-ms-keyframes bob {
+          from { margin-top: -57px; }
+          50% { margin-top: -63px; }
+          to { margin-top: -57px; }
+        }
+
+        @-o-keyframes bob {
+          from { margin-top: -57px; }
+          50% { margin-top: -63px; }
+          to { margin-top: -57px; }
+        }
+
+        @keyframes bob {
+          from { margin-top: -57px; }
+          50% { margin-top: -63px; }
+          to { margin-top: -57px; }
+        }
+
         @-webkit-keyframes fadein {
+          from { opacity: 0; }
+          40% { opacity: 0; }
+          50% { opacity: 1; }
+          60% { opacity: 0; }
+          to { opacity: 0; }
+        }
+
+        @-moz-keyframes fadein {
+          from { opacity: 0; }
+          40% { opacity: 0; }
+          50% { opacity: 1; }
+          60% { opacity: 0; }
+          to { opacity: 0; }
+        }
+
+        @-ms-keyframes fadein {
+          from { opacity: 0; }
+          40% { opacity: 0; }
+          50% { opacity: 1; }
+          60% { opacity: 0; }
+          to { opacity: 0; }
+        }
+
+        @-o-keyframes fadein {
+          from { opacity: 0; }
+          40% { opacity: 0; }
+          50% { opacity: 1; }
+          60% { opacity: 0; }
+          to { opacity: 0; }
+        }
+
+        @keyframes fadein {
           from { opacity: 0; }
           40% { opacity: 0; }
           50% { opacity: 1; }
