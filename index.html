@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+    <head>
+        <title>how do I land</title>
+        <link href="//fonts.googleapis.com/css?family=The+Girl+Next+Door|Lusitana"
+              rel="stylesheet" type="text/css" />
+        <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "The Girl Next Door", sans-serif;
+            background-color: #120a00;
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: top left;
+            overflow: hidden;
+            font-size: 12px;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: normal;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #martlet {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            background: url('martlet.png');
+            width: 120px;
+            height: 100px;
+            -webkit-animation: flap .4s steps(4) infinite alternate, bob .8s linear infinite;
+        }
+
+        #help {
+            position: absolute;
+            font-size: 14px;
+            -webkit-animation: fadein 10s linear .1s infinite;
+            margin-top: 10px;
+            opacity: 0;
+        }
+
+        #pls {
+            position: absolute;
+            font-size: 30px;
+            color: #222;
+            font-weight: bold;
+            -webkit-animation: fadein 10s linear 4s infinite;
+            opacity: 0;
+        }
+
+        /* Flapping animation */
+        @-webkit-keyframes flap {
+         from { background-position:    0px; }
+           to { background-position: -480px; }
+        }
+
+        /* Bob as in moving up and down, not as in Alice & Bob */
+        @-webkit-keyframes bob {
+          from { margin-top: -57px; }
+          50% { margin-top: -63px; }
+          to { margin-top: -57px; }
+        }
+
+        @-webkit-keyframes fadein {
+          from { opacity: 0; }
+          40% { opacity: 0; }
+          50% { opacity: 1; }
+          60% { opacity: 0; }
+          to { opacity: 0; }
+        }
+        </style>
+    </head>
+    <body>
+        <div id="martlet">
+        </div>
+        <div id="footer">
+            <h1>seriously i have <a href="http://en.wikipedia.org/wiki/Martlet">no feet</a> how do i land</h1>
+            <p>
+                another useless creation by
+                <a href="https://twitter.com/dellsystem">@dellsystem</a>
+            </p>
+        </div>
+        <div id="help">
+            pls help
+        </div>
+        <div id="pls">
+            pls
+        </div>
+
+        <script type="text/javascript">
+        // Make the text randomly move around the page
+        var constrainValue = function(n, maxValue) {
+            return Math.min(Math.round(n * 100), maxValue);
+        };
+
+        var moveText = function () {
+            var pls = document.getElementById('pls');
+            var help = document.getElementById('help');
+
+            var leftOffset = constrainValue(Math.random(), 90);
+            var topOffset = constrainValue(Math.random(), 80);
+
+            pls.style.left = leftOffset + "%";
+            pls.style.top = topOffset + "%";
+
+            help.style.left = leftOffset + "%";
+            help.style.top = topOffset + "%";
+        };
+
+        moveText();
+        setInterval(moveText, 10000);
+        </script>
+    </body>
+</html>
